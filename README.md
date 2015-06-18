@@ -2,15 +2,6 @@
 
 This project is part of of Udacity's [Full-Stack Web Developer Nanodegree](https://www.udacity.com/course/nd004).
 
-###Improvements since previous submission:
-
-1. Added back MEMCACHE_FEATURED_SPEAKER_KEY to conference.py and imported it in main.py
-1. Renamed DEFAULTS into CONFERENCE_DEFAULTS
-1. Added _checkKey for conference key in all places conference key is used
-1. Changed naming from conf to c_key for keys
-1. I did not combine _ndbKey and _checkKey since _ndbKey is a workaround that can be
-removed if the NDB issue 143 is fixed, but _checkKey will always be needed.
-
 ### Task 1 - Description of Sessions and Speakers implementation
 
 Sessions are implemented as child entity of Conference since they are always

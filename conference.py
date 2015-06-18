@@ -629,6 +629,7 @@ class ConferenceApi(remote.Service):
         return sf
 
     def _createSessionObject(self, request):
+        """Create session object."""
         user = endpoints.get_current_user()
         if not user:
             raise endpoints.UnauthorizedException('Authorization required')
@@ -832,7 +833,7 @@ class ConferenceApi(remote.Service):
             path='sessions/wishList/{websafeSessionKey}',
             http_method='POST', name='addSessionToWishlist')
     def addSessionToWishlist(self, request):
-        """Register user for selected conference."""
+        """Add a session to the user wishlist."""
         return self._sessionAddIt(request)
 
     #getSessionsInWishlist() -- query for all the sessions in a conference that the user is interested in
