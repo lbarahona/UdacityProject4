@@ -693,7 +693,8 @@ class ConferenceApi(remote.Service):
                 params={
                     'sessionKey': s_key.urlsafe(),
                     'speakerKey': data['speakerKey'],
-                    'speakerDisplayName': data['speakerDisplayName']
+                    'speakerDisplayName': data['speakerDisplayName'],
+                    'confKey' : conf.key.urlsafe()
                     },
                 url='/tasks/check_featuredSpeaker'
                 )
